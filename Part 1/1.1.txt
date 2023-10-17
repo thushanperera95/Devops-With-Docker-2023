@@ -1,0 +1,6 @@
+thush@BEAST MINGW64 ~
+$ docker ps -a
+CONTAINER ID   IMAGE     COMMAND                  CREATED          STATUS                      PORTS     NAMES
+55342cd2a999   nginx     "/docker-entrypoint.…"   44 seconds ago   Exited (0) 23 seconds ago             frosty_mcclintock
+7fb827e9390e   nginx     "/docker-entrypoint.…"   47 seconds ago   Up 47 seconds               80/tcp    interesting_elion
+07f2c91c00ca   nginx     "/docker-entrypoint.…"   50 seconds ago   Exited (0) 16 seconds ago             unruffled_poitras

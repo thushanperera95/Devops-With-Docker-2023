@@ -1,0 +1,7 @@
+1. docker image pull devopsdockeruh/simple-web-service:ubuntu
+2. docker image pull devopsdockeruh/simple-web-service:alpine
+3. docker images
+4. docker run -d -it --name sizes-of-images devopsdockeruh/simple-web-service:alpine
+5. docker exec -it sizes-of-images /bin/sh
+6. tail -f text.log
+7. Secret message is: 'You can find the source code here: https://github.com/docker-hy'

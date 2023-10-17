@@ -1,0 +1,7 @@
+thush@BEAST MINGW64 ~
+$ docker ps -a
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+
+thush@BEAST MINGW64 ~
+$ docker images
+REPOSITORY   TAG       IMAGE ID   CREATED   SIZE
