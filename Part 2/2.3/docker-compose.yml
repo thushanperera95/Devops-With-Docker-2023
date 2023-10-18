@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  hello-backend:
+    image: hello-backend
+    ports:
+      - 8080:8080
+    container_name: hello-backend
+
+  hello-frontend:
+    image: hello-frontend
+    ports:
+      - 5000:5000
+    container_name: hello-frontend

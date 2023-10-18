@@ -1,0 +1,40 @@
+version: '3.8'
+
+services:
+  hello-backend:
+    image: hello-backend
+    ports:
+      - 8080:8080
+    container_name: hello-backend
+    environment:
+      - REDIS_HOST=redis-cache
+      - POSTGRES_HOST=hello-db
+    depends_on:
+      - redis-cache
+      - db
+
+  hello-frontend:
+    image: hello-frontend
+    ports:
+      - 5000:5000
+    container_name: hello-frontend
+    depends_on:
+      - hello-backend
+
+  redis-cache:
+    image: redis:7.2.1
+    restart: unless-stopped
+    ports:
+      - 6379:6379
+    volumes:
+      - ./cache:/data
+    container_name: redis-cache
+
+  db:
+    image: postgres:13.2-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_PASSWORD: postgres
+    container_name: hello-db
+    volumes:
+      - ./database:/var/lib/postgresql/data
